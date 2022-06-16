@@ -22,4 +22,28 @@ public class BaseClass extends Reusable_Annotations_Class{
     }//end of googleSearchResultPage method
 
 
-}
+
+    public static Harvard_Pilgrim_Homepage harvardPilgrimHomepage(){
+        Harvard_Pilgrim_Homepage harvardPilgrimHomepage= new Harvard_Pilgrim_Homepage(driver);
+        return harvardPilgrimHomepage;
+    }//end of harvard pilgrim homepage method
+
+    public static HarvardSelectPlan harvardSelectPlan(){
+        HarvardSelectPlan harvardSelectPlan = new HarvardSelectPlan(driver);
+        return harvardSelectPlan;
+    }//end of harvard select plan
+
+    public static HarvardPilgrimPlanType harvardPilgrimPlanType(){
+        HarvardPilgrimPlanType harvardPilgrimPlanType = new HarvardPilgrimPlanType(driver);
+        return harvardPilgrimPlanType;
+    }
+
+    public static HarvardHeaderMaine harvardHeaderMaine(){
+        HarvardHeaderMaine harvardHeaderMaine = new HarvardHeaderMaine(driver);
+        return harvardHeaderMaine;
+    }//end of harvard header plan
+
+
+
+
+}//end of base class

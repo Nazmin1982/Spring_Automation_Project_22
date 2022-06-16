@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
+import java.util.List;
 
 public class Reusable_Actions_POM_Loggers {
     //set a static timeout variable so it can cover all explicit for all methods
@@ -77,10 +78,10 @@ public class Reusable_Actions_POM_Loggers {
 
 
     //create a sendkeys method
-    public static void sendKeysAction(WebDriver driver,WebElement xpath, String userValue, ExtentTest logger,String elementName){
+    public static void sendKeysAction(WebDriver driver, WebElement xpath, String userValue, ExtentTest logger, String elementName){
         WebDriverWait wait = new WebDriverWait(driver,timeout);
         try{
-            WebElement element = wait.until(ExpectedConditions.visibilityOf(xpath));
+            WebElement element = wait.until(ExpectedConditions.visibilityOf((WebElement) xpath));
             element.sendKeys(userValue);
             logger.log(LogStatus.PASS,"Successfully enter user value on element " + elementName);
         } catch (Exception e) {
